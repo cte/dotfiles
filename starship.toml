@@ -1,0 +1,76 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = '''
+[│](red) $username[@](bold black)$hostname$time$conda$python$ruby$nodejs
+[│](bright-red) $directory$git_branch$git_status$cmd_duration
+[│](purple) $character'''
+
+[character]
+success_symbol = "[\uf0da](bold green)"
+error_symbol = "[󰟢](red)"
+
+[username]
+style_user = "bold black"
+style_root = "bold cyan"
+show_always = true
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold green"
+format = "[$ssh_symbol$hostname]($style) "
+
+[directory]
+style = "white"
+
+[git_branch]
+symbol = ' '
+style = 'bold purple'
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[git_status]
+diverged = '[󰃻 +$ahead_count -$behind_count](bold red) '
+ahead = '⇡$count '
+behind = '⇣$count '
+up_to_date = '󰾨 '
+conflicted = '󰈻 '
+stashed = ' $count '
+modified = '!$count '
+untracked = '[?$count](bold #FFC0CB) '
+staged = '[+$count](bold green) '
+deleted = '[-$count](bold red) '
+renamed = '[±$count](bold yellow) '
+style = 'bold purple'
+format = '[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed]($style) '
+
+[cmd_duration]
+min_time = 1000
+show_milliseconds = true
+
+[time]
+disabled = false
+style = "bold black"
+time_format = "󰢗 %I:%M"
+format = '[$time]($style) '
+
+[conda]
+symbol = ' '
+style = 'bold green'
+format = '[$symbol$environment]($style) '
+
+[python]
+symbol = ' '
+style = 'bold green'
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[ruby]
+symbol = ' '
+style = 'bold green'
+format = '[$symbol($version )]($style)'
+
+[nodejs]
+symbol = '󰎙 '
+style = 'bold green'
+format = '[$symbol($version )]($style)'
