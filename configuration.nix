@@ -121,7 +121,6 @@
     code-cursor
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
-    gnomeExtensions.arc-menu
   ];
 
   services.xserver.excludePackages = with pkgs; [ xterm ];

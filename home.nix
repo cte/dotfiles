@@ -168,7 +168,6 @@ in {
         ];
         disable-user-extensions = false;
         enabled-extensions = [
-          "arcmenu@arcmenu.com"
           "dash-to-dock@micxgx.gmail.com"
           "just-perfection-desktop@just-perfection"
           "system-monitor@gnome-shell-extensions.gcampax.github.com"
