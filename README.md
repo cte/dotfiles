@@ -27,6 +27,7 @@ Rebuild system:
 
 ```sh
 cd ~/dotfiles
+cp /etc/nixos/hardware-configuration.nix .
 sudo nixos-rebuild switch --flake .#dusk
 ```
 
@@ -42,6 +43,12 @@ Rebuild home:
 
 ```sh
 home-manager switch --flake .
+```
+
+Reboot:
+
+```sh
+sudo reboot
 ```
 
 ### Resources
