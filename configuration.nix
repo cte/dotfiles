@@ -45,6 +45,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.xterm.enable = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -122,39 +123,42 @@
     gnomeExtensions.arc-menu
   ];
 
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    pkgs.baobab      # disk usage analyzer
-    pkgs.cheese      # photo booth
-    pkgs.eog         # image viewer
-    pkgs.epiphany    # web browser
-    pkgs.gedit       # text editor
-    pkgs.simple-scan # document scanner
-    pkgs.totem       # video player
-    pkgs.yelp        # help viewer
-    pkgs.evince      # document viewer
-    pkgs.file-roller # archive manager
-    pkgs.geary       # email client
-    pkgs.seahorse    # password manager
+  services.xserver.excludePackages = with pkgs; [ xterm ];
 
-    pkgs.gnome-calculator
-    pkgs.gnome-calendar
-    # pgks.gnome-camera
-    pkgs.gnome-characters
-    pkgs.gnome-clocks
-    pkgs.gnome-contacts
-    # pkgs.gnome-font-viewer
-    # pkgs.gnome-logs
-    pkgs.gnome-maps
-    pkgs.gnome-music
-    pkgs.gnome-photos
-    # pkgs.gnome-screenshot
-    # pkgs.gnome-system-monitor
-    pkgs.gnome-weather
-    pkgs.gnome-disk-utility
-    pkgs.gnome-connections
-    pkgs.gnome-tour
-    # pkgs.gnome-text-editor
+  environment.gnome.excludePackages = with pkgs; [
+    baobab      # disk usage analyzer
+    eog         # image viewer
+    epiphany    # web browser
+    gedit       # text editor
+    simple-scan # document scanner
+    totem       # video player
+    yelp        # help viewer
+    evince      # document viewer
+    file-roller # archive manager
+    geary       # email client
+    seahorse    # password manager
+    snapshot    # camera
+
+    gnome-calculator
+    gnome-calendar
+    gnome-characters
+    gnome-clocks
+    gnome-contacts
+    # gnome-font-viewer
+    # gnome-logs
+    gnome-maps
+    gnome-music
+    gnome-photos
+    # gnome-screenshot
+    # gnome-system-monitor
+    gnome-weather
+    gnome-disk-utility
+    gnome-connections
+    gnome-tour
+    # gnome-text-editor
   ];
+
+  documentation.nixos.enable = false;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
