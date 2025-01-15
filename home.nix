@@ -164,6 +164,7 @@ in {
           "1password.desktop"
           "code.desktop"
           "cursor.desktop"
+          "dropbox.desktop"
         ];
         disable-user-extensions = false;
         enabled-extensions = [
