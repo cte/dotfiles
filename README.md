@@ -2,21 +2,6 @@
 
 ### Getting Started
 
-Install VMWare tools and reboot the machine so Guest/Host Copy/Paste works.
-
-... TODO ...
-
-Create SSH keypair:
-
-```sh
-ssh-keygen -trsa
-cat .ssh/id_rsa.pub
-```
-
-Upload SSH key to Github:
-
-... TODO ...
-
 Clone repo:
 
 ```sh
