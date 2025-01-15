@@ -112,6 +112,7 @@
     neovim
     ripgrep
     wezterm
+    kitty
     autokey
     _1password-gui
     dropbox-cli
