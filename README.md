@@ -2,18 +2,21 @@
 
 ### Getting Started
 
-Clone repo:
+Clone repo and add hardware configuration:
 
 ```sh
-nix-shell -p git --command "git clone https://github.com/cte/dotfiles.git"
+nix-shell -p git
+git clone https://github.com/cte/dotfiles.git
+cd dotfiles
+cp /etc/nixos/hardware-configuration.nix .
+git add hardware-configuration.nix
+exit
 ```
 
 Rebuild system:
 
 ```sh
 cd ~/dotfiles
-cp /etc/nixos/hardware-configuration.nix .
-nix-shell -p git --command "git add hardware-configuration.nix"
 sudo nixos-rebuild switch --flake .#dusk
 ```
 
