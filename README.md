@@ -13,6 +13,7 @@ Rebuild system:
 ```sh
 cd ~/dotfiles
 cp /etc/nixos/hardware-configuration.nix .
+nix-shell -p git --command "git add hardware-configuration.nix"
 sudo nixos-rebuild switch --flake .#dusk
 ```
 
