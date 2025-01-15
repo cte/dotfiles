@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 let
   username = "cte";
+  email = "cestreich@gmail.com";
   homeDir = "/home/${username}";
   configDir = "${homeDir}/dotfiles";
 in {
@@ -126,6 +127,16 @@ in {
     };
   };
 
+  # https://mynixos.com/home-manager/options/programs.git
+  programs.git = {
+    enable = true;
+    userName = "${username}";
+    userEmail = "${email}";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
+
   programs.starship.enable = true;
 
   programs.home-manager.enable = true;
@@ -136,4 +147,25 @@ in {
     ];
 
   services.dropbox.enable = true;
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = [
+          "arcmenu@arcmenu.com"
+          "dash-to-dock@micxgx.gmail.com"
+          "just-perfection-desktop@just-perfection"
+          "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        ];
+      };
+
+      # Configure individual extensions
+      # "org/gnome/shell/extensions/blur-my-shell" = {
+      #   brightness = 0.75;
+      #   noise-amount = 0;
+      # };
+    };
+  };
 }

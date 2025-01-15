@@ -118,6 +118,9 @@
     dropbox
     vscode
     code-cursor
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.just-perfection
+    gnomeExtensions.arc-menu
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
@@ -136,6 +139,7 @@
 
     pkgs.gnome-calculator
     pkgs.gnome-calendar
+    # pgks.gnome-camera
     pkgs.gnome-characters
     pkgs.gnome-clocks
     pkgs.gnome-contacts
