@@ -4,7 +4,7 @@
 
 Install VMWare tools and reboot the machine so Guest/Host Copy/Paste works.
 
-# TODO
+... TODO ...
 
 Create SSH keypair:
 
@@ -15,9 +15,9 @@ cat .ssh/id_rsa.pub
 
 Upload SSH key to Github:
 
-# TODO
+... TODO ...
 
-Clone dotfiles repo:
+Clone repo:
 
 ```sh
 nix-shell -p git --command "git clone git@github.com:cte/dotfiles.git"
