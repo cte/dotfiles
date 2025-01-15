@@ -23,15 +23,7 @@ in {
   home.file = {
     ".wezterm.lua".source = ./wezterm.lua;
     ".config/starship.toml".source = ./starship.toml;
-  };
-
-  home.sessionVariables = {
-    HISTSIZE = 100000;
-    SAVEHIST = 100000;
-    HISTFILE = "~/.zsh_history";
-    EDITOR = "nvim";
-    PATH = "$HOME/.local/bin:$PATH";
-    SCREENDIR = "$HOME/.screen";
+    ".config/hypr/hyprland.conf".source = ./hyprland.conf;
   };
 
   # https://mynixos.com/home-manager/options/programs.zsh
@@ -55,6 +47,16 @@ in {
     };
 
     initExtra = ''
+      export EDITOR=nvim;
+      export HISTSIZE=100000;
+      export SAVEHIST=100000;
+      export HISTFILE="$HOME/.zsh_history";
+      export PATH="$HOME/.local/bin:$PATH";
+      export SCREENDIR="$HOME/.screen";
+      # Disable GPU acceleration for Kitty.
+      export LIBGL_ALWAYS_SOFTWARE=true;
+      export GALLIUM_DRIVER=llvmpipe;
+
       setopt histignorealldups sharehistory localoptions nullglob
 
       autoload -Uz compinit && compinit
@@ -139,6 +141,8 @@ in {
       "dropbox"
     ];
 
+  # services
+
   services.dropbox.enable = true;
 
   # gnome
@@ -182,6 +186,12 @@ in {
         custom-theme-shrink = true;
         transparency-mode = "FIXED";
         background-opacity = 0.0;
+      };
+
+      "org/gnome/shell/extensions/system-monitor" = {
+        show-swap = false;
+        show-upload = false;
+        show-download = false;
       };
     };
   };

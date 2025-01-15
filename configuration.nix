@@ -1,6 +1,8 @@
 { config, pkgs, inputs, ... }:
 
-{
+let
+  username = "cte";
+in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -87,38 +89,53 @@
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "cte";
+  services.displayManager.autoLogin.user = "${username}";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # VM
     open-vm-tools
+
+    # Nix
     nix-search-cli
+
+    # Basic
     oh-my-zsh
     screen
     wget
     git
     neovim
     ripgrep
+
+    # Terminals
     wezterm
     kitty
+    terminator
+
+    # Apps
     autokey
     _1password-gui
     dropbox-cli
     dropbox
     vscode
     code-cursor
+
+    # Hyprland
+    waybar
+    wofi
+
+    # Gnome
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
   ];
@@ -157,6 +174,10 @@
     gnome-tour
     # gnome-text-editor
   ];
+
+  programs.firefox.enable = true;
+
+  programs.hyprland.enable = true;
 
   documentation.nixos.enable = false;
 

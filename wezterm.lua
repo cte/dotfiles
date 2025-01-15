@@ -20,7 +20,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- config.front_end = "WebGpu"
+config.front_end = "Software"
 config.enable_wayland = false
 
 config.initial_rows = 30
