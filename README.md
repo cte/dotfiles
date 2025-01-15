@@ -5,7 +5,7 @@
 Clone repo:
 
 ```sh
-nix-shell -p git --command "git clone git@github.com:cte/dotfiles.git"
+nix-shell -p git --command "git clone https://github.com/cte/dotfiles.git"
 ```
 
 Rebuild system:
