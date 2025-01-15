@@ -2,6 +2,10 @@
 
 ### Getting Started
 
+Install VMWare tools and reboot the machine so Guest/Host Copy/Paste works.
+
+# TODO
+
 Create SSH keypair:
 
 ```sh
@@ -16,7 +20,7 @@ Upload SSH key to Github:
 Clone dotfiles repo:
 
 ```sh
-git clone git@github.com:cte/dotfiles.git
+nix-shell -p git --command "git clone git@github.com:cte/dotfiles.git"
 ```
 
 Rebuild system:
@@ -45,6 +49,8 @@ home-manager switch --flake .
 #### Documentation
 - https://wiki.nixos.org/wiki/GNOME
 - https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/#declaratively-configuring-gnome
+- https://github.com/mitchellh/nixos-config
+- https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505/11
 
 #### Videos
 - https://www.youtube.com/watch?v=ACybVzRvDhs
