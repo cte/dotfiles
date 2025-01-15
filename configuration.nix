@@ -105,7 +105,6 @@
     open-vm-tools
     nix-search-cli
     oh-my-zsh
-    zplug
     screen
     wget
     git

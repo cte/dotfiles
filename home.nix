@@ -74,9 +74,6 @@ in {
       zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
       zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-      # https://github.com/Tarrasch/zsh-autoenv
-      zplug "Tarrasch/zsh-autoenv"
-
       # ssh - https://docs.docker.com/desktop/dev-environments/create-dev-env/
       SSH_ENV="$HOME/.ssh/agent-environment"
 
@@ -121,10 +118,6 @@ in {
       enable = true;
       plugins = [ "git" "node" "aws" ];
     };
-
-    zplug = {
-      enable = true;
-    };
   };
 
   # https://mynixos.com/home-manager/options/programs.git
@@ -148,10 +141,63 @@ in {
 
   services.dropbox.enable = true;
 
+  # gnome
+
+  gtk = {
+    enable = true;
+
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
+
+    theme = {
+      name = "orchis";
+      package = pkgs.orchis-theme;
+    };
+
+    # cursorTheme = {
+    #   name = "Numix-Cursor";
+    #   package = pkgs.numix-cursor-theme;
+    # };
+
+    # gtk3.extraConfig = {
+    #   Settings = ''
+    #     gtk-application-prefer-dark-theme=1
+    #   '';
+    # };
+
+    # gtk4.extraConfig = {
+    #   Settings = ''
+    #     gtk-application-prefer-dark-theme=1
+    #   '';
+    # };
+  };
+
+  home.sessionVariables.GTK_THEME = "orchis";
+
   dconf = {
     enable = true;
+
     settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        accent-color = "red";
+      };
+
+      "org/gnome/desktop/wm/keybindings" = {
+        switch-applications = ["<Control>Tab"];
+        switch-applications-backward = ["<Shift><Control>Tab"];
+      };
+
       "org/gnome/shell" = {
+        favorite-apps = [
+          "org.wezfurlong.wezterm.desktop"
+          "firefox.desktop"
+          "1password.desktop"
+          "code.desktop"
+          "cursor.desktop"
+        ];
         disable-user-extensions = false;
         enabled-extensions = [
           "arcmenu@arcmenu.com"
@@ -161,11 +207,15 @@ in {
         ];
       };
 
-      # Configure individual extensions
-      # "org/gnome/shell/extensions/blur-my-shell" = {
-      #   brightness = 0.75;
-      #   noise-amount = 0;
-      # };
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        disable-overview-on-startup = true;
+        dock-position = "LEFT";
+        dock-fixed = true;
+        dash-max-icon-size = 24;
+        custom-theme-shrink = true;
+        transparency-mode = "FIXED";
+        background-opacity = 0.0;
+      };
     };
   };
 }
