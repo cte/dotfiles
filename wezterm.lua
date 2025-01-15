@@ -9,7 +9,7 @@ local font_family = 'JetBrains Mono'
 -- local font_family = 'Berkeley Mono'
 -- local font_family = 'GeistMono Nerd Font'
 -- local font_family = 'JetBrainsMono Nerd Font'
-local font_size = 10
+local font_size = 20
 local font = wezterm.font({ family = font_family })
 
 -- config
@@ -20,13 +20,13 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.front_end = "Software"
+-- config.front_end = "WebGpu"
 config.enable_wayland = false
 
 config.initial_rows = 30
 config.initial_cols = 120
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.8
 
 config.default_cursor_style = 'BlinkingUnderline'
 config.cursor_blink_rate = 400

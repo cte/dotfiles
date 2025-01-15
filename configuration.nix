@@ -8,9 +8,14 @@ in {
       ./hardware-configuration.nix
     ];
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Bootloader.
+  # boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.devices = [ "nodev" ];
+  boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "dusk"; # Define your hostname.
@@ -41,6 +46,45 @@ in {
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+
+    # Modesetting is required.
+    modesetting.enable = true;
+
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    # Enable this if you have graphical corruption issues or application crashes after waking
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # of just the bare essentials.
+    powerManagement.enable = false;
+
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
+
+    # Use the NVidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of 
+    # supported GPUs is at: 
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Only available from driver 515.43.04+
+    # Currently alpha-quality/buggy, so false is currently the recommended setting.
+    open = false;
+
+    # Enable the Nvidia settings menu, accessible via `nvidia-settings`.
+    nvidiaSettings = true;
+
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -56,7 +100,7 @@ in {
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = false;
+  # services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -95,6 +139,8 @@ in {
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  services.blueman.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
@@ -117,11 +163,15 @@ in {
     git
     neovim
     ripgrep
+    killall
+
+    # Audio
+    pavucontrol
+    spotify
 
     # Terminals
     wezterm
     kitty
-    terminator
 
     # Apps
     autokey
@@ -133,7 +183,13 @@ in {
 
     # Hyprland
     waybar
-    wofi
+    rofi
+    networkmanagerapplet
+    hyprpaper
+
+    # fonts
+    nerdfonts
+    font-awesome
 
     # Gnome
     gnomeExtensions.dash-to-dock

@@ -23,7 +23,7 @@ in {
   home.file = {
     ".wezterm.lua".source = ./wezterm.lua;
     ".config/starship.toml".source = ./starship.toml;
-    ".config/hypr/hyprland.conf".source = ./hyprland.conf;
+    # ".config/hypr/hyprland.conf".source = ./hyprland.conf;
   };
 
   # https://mynixos.com/home-manager/options/programs.zsh
@@ -136,14 +136,14 @@ in {
 
   programs.home-manager.enable = true;
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (pkgs.lib.getName pkg) [
-      "dropbox"
-    ];
+  # nixpkgs.config.allowUnfreePredicate = pkg:
+  #   builtins.elem (pkgs.lib.getName pkg) [
+  #     "dropbox"
+  #   ];
 
   # services
 
-  services.dropbox.enable = true;
+  # services.dropbox.enable = true;
 
   # gnome
 

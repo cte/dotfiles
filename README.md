@@ -2,6 +2,16 @@
 
 ### Getting Started
 
+Add channels:
+
+```sh
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+sudo nix-channel --update
+
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+nix-channel --update
+```
+
 Clone repo and add hardware configuration:
 
 ```sh
@@ -23,8 +33,6 @@ sudo nixos-rebuild switch --flake .#dusk
 Install Home Manager:
 
 ```sh
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
-nix-channel --update
 nix-shell '<home-manager>' -A install
 ```
 
