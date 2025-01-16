@@ -8,7 +8,7 @@ Add channels:
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 sudo nix-channel --update
 
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 ```
 
