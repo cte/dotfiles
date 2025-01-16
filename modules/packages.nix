@@ -1,8 +1,6 @@
 { pkgs, lib, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
@@ -13,9 +11,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # VM
-    open-vm-tools
-
     # Nix
     nix-search-cli
 
@@ -46,10 +41,9 @@
     slack
 
     # Hyprland
-    waybar
-    rofi
-    networkmanagerapplet
+    hyprpanel
     hyprpaper
+    rofi
     btop
     cava
 

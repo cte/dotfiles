@@ -18,31 +18,39 @@
     };
   };
 
-  outputs = inputs @ {
+  outputs = {
     self,
     nixpkgs,
     home-manager,
     ...
-  }: {
-    nixosConfigurations = {
-      dusk = let
-        username = "cte";
-        specialArgs = { inherit username; };
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/dusk
-            ./users/${username}/nixos.nix
-            home-manager.nixosModules.home-manager {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = inputs // specialArgs;
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            }
-          ];
-        };
+  }@inputs:
+  let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [ inputs.hyprpanel.overlay ];
+      config = { allowUnfree = true; };
     };
+  in
+    {
+      nixosConfigurations = {
+        dusk = let
+          username = "cte";
+          specialArgs = { inherit inputs pkgs username; };
+        in
+          nixpkgs.lib.nixosSystem {
+            inherit system;
+            inherit specialArgs;
+            modules = [
+              ./hosts/dusk
+              home-manager.nixosModules.home-manager {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = specialArgs;
+                home-manager.users.${username} = import ./users/${username}/home.nix;
+              }
+            ];
+          };
+      };
   };
 }

@@ -77,8 +77,6 @@
     #media-session.enable = true;
   };
 
-  services.blueman.enable = true;
-
   # SECURITY
 
   # RTKit is a real-time scheduling service that allows applications (particularly audio applications) to request
