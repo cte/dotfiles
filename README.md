@@ -18,28 +18,18 @@ Clone repo and add hardware configuration:
 nix-shell -p git
 git clone https://github.com/cte/dotfiles.git
 cd dotfiles
-cp /etc/nixos/hardware-configuration.nix .
-git add hardware-configuration.nix
+cp /etc/nixos/hardware-configuration.nix ./hosts/dusk
+git add .
 exit
 ```
 
-Rebuild system:
+Alternatively, you can can create a new host configuration using the example set by `dusk`.
+
+Rebuild:
 
 ```sh
 cd ~/dotfiles
 sudo nixos-rebuild switch --flake .#dusk
-```
-
-Install Home Manager:
-
-```sh
-nix-shell '<home-manager>' -A install
-```
-
-Rebuild home:
-
-```sh
-home-manager switch --flake .
 ```
 
 Reboot:
@@ -55,6 +45,9 @@ sudo reboot
 - https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/#declaratively-configuring-gnome
 - https://github.com/mitchellh/nixos-config
 - https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505/11
+- https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
+- https://github.com/ryan4yin/nix-config
+- 
 
 #### Videos
 - https://www.youtube.com/watch?v=ACybVzRvDhs
