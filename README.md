@@ -52,11 +52,3 @@ sudo reboot
 #### Videos
 - https://www.youtube.com/watch?v=ACybVzRvDhs
 - https://www.youtube.com/watch?v=IiyBeR-Guqw
-
-### Temporary
-
-```sh
-/run/current-system/sw/bin/cp -vf ~/.config/hypr/*.conf ~/dotfiles/config/hypr
-/run/current-system/sw/bin/cp -vf ~/.config/kitty/*.conf ~/dotfiles/config/kitty
-/run/current-system/sw/bin/cp -vf ~/.config/cava/config ~/dotfiles/config/cava
-```

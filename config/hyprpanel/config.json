@@ -1,0 +1,14 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.weight": 600,
+  "theme.font.size": "12px",
+  "theme.font.name": "GeistMono Nerd Font",
+  "theme.font.label": "GeistMono Nerd Font",
+  "theme.bar.menus.popover.scaling": 100,
+  "theme.bar.menus.menu.notifications.scaling": 100,
+  "scalingPriority": "gdk",
+  "theme.notification.scaling": 100,
+  "theme.bar.menus.opacity": 100,
+  "theme.matugen": false,
+  "tear": false
+}
