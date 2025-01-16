@@ -24,6 +24,26 @@ in {
     ".wezterm.lua".source = ./wezterm.lua;
     ".config/starship.toml".source = ./starship.toml;
     # ".config/hypr/hyprland.conf".source = ./hyprland.conf;
+
+    # https://nixos.wiki/wiki/Fonts
+    # './BerkeleyMono-BoldItalic.ttf' -> '/home/cte/.local/share/fonts/BerkeleyMono-BoldItalic.ttf'
+    # './BerkeleyMono-Bold.ttf' -> '/home/cte/.local/share/fonts/BerkeleyMono-Bold.ttf'
+    # './BerkeleyMono-Italic.ttf' -> '/home/cte/.local/share/fonts/BerkeleyMono-Italic.ttf'
+    # './BerkeleyMono-Regular.ttf' -> '/home/cte/.local/share/fonts/BerkeleyMono-Regular.ttf'
+    # './InputMono-BoldItalic.ttf' -> '/home/cte/.local/share/fonts/InputMono-BoldItalic.ttf'
+    # './InputMono-Bold.ttf' -> '/home/cte/.local/share/fonts/InputMono-Bold.ttf'
+    # './InputMono-Italic.ttf' -> '/home/cte/.local/share/fonts/InputMono-Italic.ttf'
+    # './InputMono-Regular.ttf' -> '/home/cte/.local/share/fonts/InputMono-Regular.ttf'
+    # './MonoLisa-BoldItalic.ttf' -> '/home/cte/.local/share/fonts/MonoLisa-BoldItalic.ttf'
+    # './MonoLisa-Bold.ttf' -> '/home/cte/.local/share/fonts/MonoLisa-Bold.ttf'
+    # './MonoLisa-RegularItalic.ttf' -> '/home/cte/.local/share/fonts/MonoLisa-RegularItalic.ttf'
+    # './MonoLisa-Regular.ttf' -> '/home/cte/.local/share/fonts/MonoLisa-Regular.ttf'
+    # './OperatorMonoLig-LightItalic.otf' -> '/home/cte/.local/share/fonts/OperatorMonoLig-LightItalic.otf'
+    # './OperatorMonoLig-Light.otf' -> '/home/cte/.local/share/fonts/OperatorMonoLig-Light.otf'
+    # './OperatorMonoSSmLig-BookItalic.otf' -> '/home/cte/.local/share/fonts/OperatorMonoSSmLig-BookItalic.otf'
+    # './OperatorMonoSSmLig-Book.otf' -> '/home/cte/.local/share/fonts/OperatorMonoSSmLig-Book.otf'
+    # './OperatorMonoSSmLig-MediumItalic.otf' -> '/home/cte/.local/share/fonts/OperatorMonoSSmLig-MediumItalic.otf'
+    # './OperatorMonoSSmLig-Medium.otf' -> '/home/cte/.local/share/fonts/OperatorMonoSSmLig-Medium.otf'
   };
 
   # https://mynixos.com/home-manager/options/programs.zsh
