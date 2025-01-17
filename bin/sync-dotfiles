@@ -1,10 +1,11 @@
 
 #!/usr/bin/env bash
 
-# cp ~/dotfiles/sync-dotfiles ~/.local/bin
-
 # cava
 /run/current-system/sw/bin/cp -vf ~/.config/cava/config ~/dotfiles/config/cava
+
+# code
+/run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/code
 
 # hyprland
 /run/current-system/sw/bin/cp -vf ~/.config/hypr/*.conf ~/dotfiles/config/hypr
@@ -20,6 +21,3 @@
 
 # starship
 /run/current-system/sw/bin/cp -vf ~/.config/starship.toml ~/dotfiles/config/starship
-
-# vscode
-/run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/vscode
