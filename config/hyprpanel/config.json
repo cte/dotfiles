@@ -40,6 +40,6 @@
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "menus.clock.time.hideSeconds": false,
   "menus.clock.weather.enabled": false,
-  "theme.bar.menus.menu.media.scaling": 45,
-  "theme.bar.menus.menu.network.scaling": 95
+  "theme.bar.menus.menu.media.scaling": 100,
+  "theme.bar.menus.menu.network.scaling": 100
 }
