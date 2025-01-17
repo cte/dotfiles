@@ -2,14 +2,14 @@ local wezterm = require 'wezterm'
 
 -- globals
 
-local font_family = 'JetBrains Mono'
+-- local font_family = 'JetBrains Mono'
 -- local font_family = 'Operator Mono SSm Lig Medium'
 -- local font_family = '0xProto'
--- local font_family = 'Input'
+local font_family = 'Input'
 -- local font_family = 'Berkeley Mono'
 -- local font_family = 'GeistMono Nerd Font'
 -- local font_family = 'JetBrainsMono Nerd Font'
-local font_size = 20
+local font_size = 18
 local font = wezterm.font({ family = font_family })
 
 -- config
