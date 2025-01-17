@@ -1,6 +1,9 @@
 
 #!/usr/bin/env bash
 
+# btop
+/run/current-system/sw/bin/cp -vfr ~/.config/btop/* ~/dotfiles/config/btop
+
 # cava
 /run/current-system/sw/bin/cp -vf ~/.config/cava/config ~/dotfiles/config/cava
 
