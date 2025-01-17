@@ -1,7 +1,7 @@
 {
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 24,
+  "editor.fontSize": 16,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.rulers": [80, 120],
@@ -10,11 +10,12 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": "200",
   "terminal.integrated.inheritEnv": false,
-  "workbench.colorTheme": "One Hunter Theme",
+  "workbench.colorTheme": "One Hunter Theme Vercel",
   "files.autoSave": "onFocusChange",
   "security.workspace.trust.untrustedFiles": "open",
   "git.autofetch": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-  "window.menuBarVisibility": "toggle"
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 2
 }

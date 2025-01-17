@@ -2,8 +2,14 @@
   "bar.customModules.updates.pollingInterval": 1440000,
   "bar.layouts": {
     "0": {
-      "left": ["dashboard", "workspaces", "windowtitle"],
-      "middle": ["media"],
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
       "right": [
         "volume",
         "network",
@@ -22,9 +28,18 @@
   "theme.font.label": "GeistMono Nerd Font",
   "theme.bar.menus.popover.scaling": 100,
   "theme.bar.menus.menu.notifications.scaling": 100,
-  "scalingPriority": "gdk",
+  "scalingPriority": "hyprland",
   "theme.notification.scaling": 100,
   "theme.bar.menus.opacity": 100,
   "theme.matugen": false,
-  "tear": false
+  "tear": false,
+  "theme.bar.floating": true,
+  "theme.bar.buttons.enableBorders": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "menus.clock.time.hideSeconds": false,
+  "menus.clock.weather.enabled": false,
+  "theme.bar.menus.menu.media.scaling": 45,
+  "theme.bar.menus.menu.network.scaling": 95
 }

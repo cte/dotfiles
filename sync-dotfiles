@@ -1,10 +1,11 @@
 
 #!/usr/bin/env bash
 
-# cp ~/dotfiles/sync-dotfiles.sh ~/.local/bin
+# cp ~/dotfiles/sync-dotfiles ~/.local/bin
 
 /run/current-system/sw/bin/cp -vf ~/.config/hypr/*.conf ~/dotfiles/config/hypr
 /run/current-system/sw/bin/cp -vf ~/.config/hyprpanel/config.json ~/dotfiles/config/hyprpanel
 /run/current-system/sw/bin/cp -vf ~/.config/kitty/*.conf ~/dotfiles/config/kitty
 /run/current-system/sw/bin/cp -vf ~/.config/cava/config ~/dotfiles/config/cava
 /run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/Code/User
+/run/current-system/sw/bin/cp -vf ~/.config/starship.toml ~/dotfiles/config/starship/starship.toml
