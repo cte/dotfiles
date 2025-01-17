@@ -7,7 +7,7 @@
     nerd-fonts.fira-mono
     nerd-fonts.space-mono
     nerd-fonts.geist-mono
-    font-awesome
+    nerd-fonts.symbols-only
   ];
 
   environment.systemPackages = with pkgs; [
