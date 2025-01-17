@@ -23,4 +23,4 @@
 /run/current-system/sw/bin/cp -vf ~/.config/starship.toml ~/dotfiles/config/starship
 
 # vscode
-/run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/Code/User
+/run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/vscode
