@@ -20,6 +20,7 @@
     screen
     wget
     git
+    zig # https://github.com/LazyVim/LazyVim/discussions/1920#discussioncomment-9810412
     neovim
     ripgrep
     fastfetch

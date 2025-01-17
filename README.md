@@ -55,6 +55,7 @@ cd ~/dotfiles/config
 - https://nixos-and-flakes.thiscute.world/nixos-with-flakes/start-using-home-manager
 - https://github.com/ryan4yin/nix-config
 - https://github.com/Daholli/nixos-config
+- https://hyprland.org/hall_of_fame/
 
 #### Videos
 - https://www.youtube.com/watch?v=ACybVzRvDhs
