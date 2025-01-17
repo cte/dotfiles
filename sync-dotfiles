@@ -7,3 +7,4 @@
 /run/current-system/sw/bin/cp -vf ~/.config/hyprpanel/config.json ~/dotfiles/config/hyprpanel
 /run/current-system/sw/bin/cp -vf ~/.config/kitty/*.conf ~/dotfiles/config/kitty
 /run/current-system/sw/bin/cp -vf ~/.config/cava/config ~/dotfiles/config/cava
+/run/current-system/sw/bin/cp -vf ~/.config/Code/User/settings.json ~/dotfiles/config/Code/User
