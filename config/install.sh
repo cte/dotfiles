@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dirs=("bin" "btop" "cava" "fonts" "hypr" "starship" "wezterm")
+dirs=("bin" "btop" "cava" "code" "cursor" "fonts" "hypr" "hyprpanel" "kitty" "rofi" "starship" "wezterm")
 
 for dir in "${dirs[@]}"; do
   echo $dir

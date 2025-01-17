@@ -9,8 +9,8 @@ local wezterm = require 'wezterm'
 -- local font_family = 'JetBrainsMono Nerd Font'
 -- local font_family = 'SpaceMono Nerd Font'
 local font_family = 'NotoSansM Nerd Font Mono'
-local font_size = 18
-local font = wezterm.font({ family = font_family, weight = 'Regular' })
+local font_size = 16
+local font = wezterm.font({ family = font_family, weight = 'Medium' })
 
 -- config
 
@@ -26,14 +26,14 @@ config.enable_wayland = false
 config.initial_rows = 30
 config.initial_cols = 120
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.7
 
 config.default_cursor_style = 'BlinkingUnderline'
 config.cursor_blink_rate = 400
 config.cursor_blink_ease_in = 'Linear'
 config.cursor_blink_ease_out = 'Linear'
 
-config.color_scheme = 'Hardcore (Gogh)'
+config.color_scheme = 'Catppuccin Mocha'
 
 config.font = font
 config.font_size = font_size
