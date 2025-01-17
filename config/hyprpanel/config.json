@@ -1,5 +1,21 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
+  "bar.layouts": {
+    "0": {
+      "left": ["dashboard", "workspaces", "windowtitle"],
+      "middle": ["media"],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "ram",
+        "cpu",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
   "theme.font.weight": 600,
   "theme.font.size": "12px",
   "theme.font.name": "GeistMono Nerd Font",
