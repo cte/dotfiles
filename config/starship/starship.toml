@@ -3,21 +3,16 @@
 palette = 'catppuccin_latte'
 
 format = """
-$username\
-[](fg:bg bg:flamingo)\
-$hostname\
-[](fg:flamingo bg:mauve)\
+[](fg:sky)\
 $directory\
-[](fg:mauve bg:peach)\
+[](fg:sky bg:mauve)\
 $git_branch\
 $git_status\
-[](fg:peach bg:maroon)\
+[](fg:mauve bg:maroon)\
 $status\
 [](fg:maroon bg:yellow)\
 $cmd_duration\
-[](fg:yellow bg:bg)\
-$fill\
-$time\
+[](fg:yellow)\
 $line_break\
 $character\
 """
@@ -67,24 +62,24 @@ mantle_light = "#181825"
 crust = "#dce0e8"
 bg = "#181825"
 
-[username]
-show_always = true
-format = "[ 󰊠](fg:text bg:bg)[ $user ](fg:text bg:bg)"
+# [username]
+# show_always = true
+# format = "[ $user ](fg:text bg:bg)"
 
-[hostname]
-ssh_only = false
-format = "[ ](fg:flamingo_light bg:flamingo)[ $ssh_symbol$hostname ](fg:flamingo_light bg:flamingo)"
+# [hostname]
+# ssh_only = false
+# format = "[ $ssh_symbol$hostname ](fg:flamingo_light bg:flamingo)"
 
 [directory]
-format = "[ ](fg:mauve_light bg:mauve)[ $path ](fg:mauve_light bg:mauve)"
+format = "[$path ](fg:sky_light bg:sky)"
 truncate_to_repo = false
 truncation_length = 0
 
 [git_branch]
-format = "[ ](fg:peach_light bg:peach)[ $branch(:$remote_branch )](fg:peach_light bg:peach)"
+format = "[ ](fg:mauve_light bg:mauve)[ $branch(:$remote_branch )](fg:mauve_light bg:mauve)"
 
 [git_status]
-diverged = '[󰃻 +$ahead_count -$behind_count](fg:red) '
+diverged = '󰃻 +$ahead_count -$behind_count '
 ahead = '⇡$count '
 behind = '⇣$count '
 up_to_date = ' 󰾨 '
@@ -95,7 +90,7 @@ untracked = '$count? '
 staged = '+$count '
 deleted = '-$count '
 renamed = '±$count '
-format = "[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:peach_light bg:peach)"
+format = "[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:mauve_light bg:mauve)"
 
 [status]
 format = "[ ](fg:maroon_light bg:maroon)[ $status ](fg:maroon_light bg:maroon)"
@@ -116,8 +111,8 @@ format = "[ $time](fg:text bg:bg)"
 disabled = false
 
 [character]
-success_symbol = " [](fg:#a6d189)"
-error_symbol = " [](fg:#ea999c)"
+success_symbol = "[](fg:#a6d189)"
+error_symbol = "[](fg:#ea999c)"
 
 # [conda]
 # symbol = ' '

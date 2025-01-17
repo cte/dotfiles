@@ -21,6 +21,7 @@
     git
     neovim
     ripgrep
+    fastfetch
     killall
 
     # Audio

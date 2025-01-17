@@ -26,7 +26,7 @@ config.enable_wayland = false
 config.initial_rows = 30
 config.initial_cols = 120
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
 
 config.default_cursor_style = 'BlinkingUnderline'
 config.cursor_blink_rate = 400
