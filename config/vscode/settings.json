@@ -10,12 +10,13 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": "200",
   "terminal.integrated.inheritEnv": false,
-  "workbench.colorTheme": "One Hunter Theme Vercel",
+  "workbench.colorTheme": "One Hunter Theme",
   "files.autoSave": "onFocusChange",
   "security.workspace.trust.untrustedFiles": "open",
   "git.autofetch": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "workbench.iconTheme": "eq-material-theme-icons-darker"
 }
