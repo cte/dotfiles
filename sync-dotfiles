@@ -16,8 +16,7 @@
 /run/current-system/sw/bin/cp -vf ~/.config/kitty/*.conf ~/dotfiles/config/kitty
 
 # rofi
-/run/current-system/sw/bin/cp -vf ~/.config/rofi/config.rasi ~/dotfiles/config/rofi
-/run/current-system/sw/bin/cp -vfr ~/.local/share/rofi ~/dotfiles/config/rofi
+/run/current-system/sw/bin/cp -vf ~/.config/rofi/*.rasi ~/dotfiles/config/rofi
 
 # starship
 /run/current-system/sw/bin/cp -vf ~/.config/starship.toml ~/dotfiles/config/starship
