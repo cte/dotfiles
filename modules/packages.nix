@@ -7,6 +7,7 @@
     nerd-fonts.fira-mono
     nerd-fonts.space-mono
     nerd-fonts.geist-mono
+    nerd-fonts.noto
     nerd-fonts.symbols-only
   ];
 
@@ -42,11 +43,15 @@
     slack
 
     # Hyprland
-    hyprpanel
     hyprpaper
+    hyprlock
+    hyprpanel
+    hypridle
+    libnotify
     rofi
     btop
     cava
+    stow
 
     # Gnome
     gnomeExtensions.dash-to-dock
