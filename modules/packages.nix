@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   fonts.packages = with pkgs; [
@@ -24,7 +24,6 @@
     zig # https://github.com/LazyVim/LazyVim/discussions/1920#discussioncomment-9810412
     neovim
     ripgrep
-    fastfetch
     killall
 
     # Audio
@@ -50,10 +49,11 @@
     hyprpanel
     hypridle
     libnotify
-    rofi
+    rofi-wayland
     btop
     cava
     stow
+    nitch
 
     # Gnome
     gnomeExtensions.dash-to-dock
@@ -100,4 +100,13 @@
   programs.hyprland.enable = true;
 
   documentation.nixos.enable = false;
+
+  # https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
+  environment.etc."current-system-packages".text =
+    let
+      packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+      sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
+      formatted = builtins.concatStringsSep "\n" sortedUnique;
+    in
+      formatted;
 }

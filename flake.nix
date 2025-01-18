@@ -2,6 +2,9 @@
 # nix flake update
 # sudo nixos-rebuild switch --flake .
 # update
+# nix-channel --update
+# nix-collect-garbage -d
+# sudo nix-collect-garbage -d
 {
   description = "NixOS configuration";
 
