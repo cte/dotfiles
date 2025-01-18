@@ -9,6 +9,7 @@
     nerd-fonts.geist-mono
     nerd-fonts.noto
     nerd-fonts.symbols-only
+    monaspace
   ];
 
   environment.systemPackages = with pkgs; [

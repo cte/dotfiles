@@ -1,7 +1,8 @@
 {
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "Monaspace Neon",
   "editor.fontSize": 16,
+  "editor.fontWeight": "300",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.rulers": [80, 120],
@@ -17,6 +18,7 @@
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2,
+  "window.titleBarStyle": "custom",
   "workbench.iconTheme": "catppuccin-mocha",
   "catppuccin.italicKeywords": false,
   "catppuccin.italicComments": false

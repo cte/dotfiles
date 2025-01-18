@@ -1,10 +1,16 @@
 { pkgs, ... }:
 
 {
-  # nixpkgs.config.allowUnfreePredicate = pkg:
-  #   builtins.elem (pkgs.lib.getName pkg) [
-  #     "dropbox"
-  #   ];
-
-  # services.dropbox.enable = true;
+  systemd.user.services.dropbox = {
+    Unit = {
+      Description = "Dropbox service";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.dropbox}/bin/dropbox";
+      Restart = "on-failure";
+    };
+  };
 }

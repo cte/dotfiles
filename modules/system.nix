@@ -47,19 +47,19 @@
   # SERVICES
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
+  # services.xserver.desktopManager.xterm.enable = false;
+  # services.xserver.excludePackages = with pkgs; [ xterm ];
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.desktopManager.xterm.enable = false;
-  services.xserver.excludePackages = with pkgs; [ xterm ];
-
-  # Configure keymap in X11.
+  # Configure keymap in X11. Also applies to Wayland.
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
+
+  # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
