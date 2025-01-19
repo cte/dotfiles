@@ -43,7 +43,7 @@
   "theme.bar.menus.menu.media.scaling": 100,
   "theme.bar.menus.menu.network.scaling": 100,
   "theme.bar.buttons.dashboard.enableBorder": false,
-  "theme.bar.transparent": false,
-  "theme.bar.opacity": 50,
+  "theme.bar.transparent": true,
+  "theme.bar.opacity": 100,
   "theme.bar.buttons.opacity": 100
 }

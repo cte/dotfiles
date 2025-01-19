@@ -1,9 +1,9 @@
 {
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "Monaspace Neon",
-  "editor.fontSize": 16,
+  "editor.fontFamily": "Input",
+  "editor.fontSize": 14,
   "editor.fontWeight": "300",
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  // "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.rulers": [80, 120],
@@ -11,7 +11,7 @@
   "terminal.integrated.fontFamily": "NotoSansM Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.inheritEnv": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "files.autoSave": "onFocusChange",
   "security.workspace.trust.untrustedFiles": "open",
   "git.autofetch": true,
@@ -19,7 +19,8 @@
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "catppuccin.italicKeywords": false,
-  "catppuccin.italicComments": false
+  "catppuccin.italicComments": false,
+  "catppuccin.accentColor": "red",
 }

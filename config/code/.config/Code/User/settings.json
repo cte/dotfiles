@@ -21,5 +21,6 @@
   "window.titleBarStyle": "custom",
   "workbench.iconTheme": "catppuccin-mocha",
   "catppuccin.italicKeywords": false,
-  "catppuccin.italicComments": false
+  "catppuccin.italicComments": false,
+  "catppuccin.accentColor": "red",
 }
