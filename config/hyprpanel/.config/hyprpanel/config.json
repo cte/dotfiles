@@ -34,12 +34,16 @@
   "theme.matugen": false,
   "tear": false,
   "theme.bar.floating": true,
-  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.buttons.enableBorders": true,
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": true,
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "menus.clock.time.hideSeconds": false,
   "menus.clock.weather.enabled": false,
   "theme.bar.menus.menu.media.scaling": 100,
-  "theme.bar.menus.menu.network.scaling": 100
+  "theme.bar.menus.menu.network.scaling": 100,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "theme.bar.transparent": false,
+  "theme.bar.opacity": 50,
+  "theme.bar.buttons.opacity": 100
 }

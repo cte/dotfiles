@@ -54,6 +54,8 @@
     cava
     stow
     nitch
+    spicetify-cli
+    vesktop
 
     # Gnome
     gnomeExtensions.dash-to-dock
