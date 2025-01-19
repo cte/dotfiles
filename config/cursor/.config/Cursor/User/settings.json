@@ -1,9 +1,9 @@
 {
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "Input",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "Monaspace Neon",
+  "editor.fontSize": 16,
   "editor.fontWeight": "300",
-  // "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.rulers": [80, 120],
@@ -22,5 +22,5 @@
   "workbench.iconTheme": "catppuccin-macchiato",
   "catppuccin.italicKeywords": false,
   "catppuccin.italicComments": false,
-  "catppuccin.accentColor": "red",
+  "catppuccin.accentColor": "peach",
 }
