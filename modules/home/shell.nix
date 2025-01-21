@@ -8,7 +8,7 @@ in {
     enable = true;
 
     shellAliases = {
-      ls = "ls -al --color";
+      ls = "eza -al";
       mv = "mv -iv";
       cp = "cp -iv";
       rm = "rm -iv";
@@ -24,33 +24,57 @@ in {
 
     initExtra = ''
       export EDITOR=nvim;
+      export PATH="$HOME/.local/bin:$PATH";
+      export SCREENDIR="$HOME/.screen";
+
+      # History
       export HISTSIZE=100000;
       export SAVEHIST=100000;
       export HISTFILE="$HOME/.zsh_history";
-      export PATH="$HOME/.local/bin:$PATH";
-      export SCREENDIR="$HOME/.screen";
-      # Disable GPU acceleration for Kitty.
-      export LIBGL_ALWAYS_SOFTWARE=true;
-      export GALLIUM_DRIVER=llvmpipe;
+      export HISTDUP=erase;
+      setopt appendhistory;
+      setopt sharehistory;
+      setopt hist_ignore_space;
+      setopt hist_ignore_all_dups;
+      setopt hist_save_no_dups;
+      setopt hist_ignore_dups;
+      setopt hist_find_no_dups;
+      autoload -Uz history-search-end
+      zle -N history-beginning-search-backward-end history-search-end
+      zle -N history-beginning-search-forward-end history-search-end
+      bindkey "$terminfo[kcuu1]" history-beginning-search-backward-end
+      bindkey "$terminfo[kcud1]" history-beginning-search-forward-end
 
-      setopt histignorealldups sharehistory localoptions nullglob
+      # Zinit - https://github.com/zdharma-continuum/zinit
+      # https://www.youtube.com/watch?v=ud7YxC33Z3w
+      ZINIT_HOME="''${XDG_DATA_HOME:-''${HOME}/.local/share}/zinit/zinit.git"
+      [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+      [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+      source "''${ZINIT_HOME}/zinit.zsh"
 
+      # Plugins
+      zinit light zsh-users/zsh-syntax-highlighting
+      zinit light zsh-users/zsh-completions
+      zinit light zsh-users/zsh-autosuggestions
+      zinit light Aloxaf/fzf-tab
+
+      # Snippets
+      zinit snippet OMZP::git
+      zinit snippet OMZP::sudo
+      zinit snippet OMZP::aws
+      zinit snippet OMZP::command-not-found
+
+      # Completions
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
+      zstyle ':completion:*' menu no
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
       autoload -Uz compinit && compinit
-      zstyle ':completion:*' auto-description 'specify: %d'
-      zstyle ':completion:*' completer _expand _complete _correct _approximate
-      zstyle ':completion:*' format 'Completing %d'
-      zstyle ':completion:*' group-name '''
-      zstyle ':completion:*' menu select=2
-      zstyle ':completion:*:default' list-colors ''${(s.:.)LS_COLORS}
-      zstyle ':completion:*' list-colors '''
-      zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-      zstyle ':completion:*' matcher-list ''' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-      zstyle ':completion:*' menu select=long
-      zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-      zstyle ':completion:*' use-compctl false
-      zstyle ':completion:*' verbose true
-      zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-      zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+      zinit cdreplay -q
+
+      # If a glob pattern doesn't match any files, it expands to nothing (empty list)
+      setopt nullglob
 
       # ssh - https://docs.docker.com/desktop/dev-environments/create-dev-env/
       SSH_ENV="$HOME/.ssh/agent-environment"
@@ -73,30 +97,15 @@ in {
 
       for pubkey in $HOME/.ssh/{id_*,*.pem}; do
         if grep -q PRIVATE "$pubkey"; then
-          ssh-add "$pubkey" # 2>/dev/null
+          ssh-add "$pubkey" 2>/dev/null
         fi
       done
-
-      # asdf - https://asdf-vm.com/
-      [ -f $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
-
-      # NVM - https://github.com/nvm-sh/nvm
-      if [ -d "$HOME/.nvm" ]; then
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-      fi
-
-      # Direnv - https://direnv.net/
-      if command -v direnv >/dev/null 2>&1; then
-        eval "$(direnv hook zsh)"
-      fi
     '';
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "node" "aws" ];
-    };
   };
 
   programs.starship.enable = true;
+  programs.direnv.enable = true;
+  programs.fzf.enable = true;
+  programs.zoxide.enable = true;
+  programs.eza.enable = true;
 }

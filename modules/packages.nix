@@ -17,7 +17,6 @@
     nix-search-cli
 
     # Basic
-    oh-my-zsh
     screen
     wget
     git
@@ -33,6 +32,9 @@
     # Terminals
     wezterm
     kitty
+
+    # Shell
+    zinit
 
     # Apps
     autokey
