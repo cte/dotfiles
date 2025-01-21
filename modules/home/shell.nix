@@ -13,6 +13,7 @@ in {
       cp = "cp -iv";
       rm = "rm -iv";
       ".." = "cd ..";
+      cat = "bat";
       screen = "TERM=screen screen";
       psg = "ps -ef | grep -v grep | grep $*";
       getpid = "getpid() { ps -ef | grep -v grep | grep \"$1\" | awk '{print $2}'; }; getpid";
@@ -108,4 +109,5 @@ in {
   programs.fzf.enable = true;
   programs.zoxide.enable = true;
   programs.eza.enable = true;
+  programs.bat.enable = true;
 }
