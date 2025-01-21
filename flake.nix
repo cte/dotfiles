@@ -10,11 +10,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     wezterm.url = "github:wez/wezterm?dir=nix";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     hyprpanel = {
       url = "github:jas-singhfsu/hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,17 +32,18 @@
   }@inputs:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      overlays = [ inputs.hyprpanel.overlay ];
-      config = { allowUnfree = true; };
+    nixpkgsConfig = {
+      nixpkgs.overlays = [
+        inputs.hyprpanel.overlay
+      ];
+      nixpkgs.config.allowUnfree = true;
     };
   in
     {
       nixosConfigurations = {
         dusk = let
           username = "cte";
-          specialArgs = { inherit inputs pkgs username; };
+          specialArgs = { inherit inputs username; };
         in
           nixpkgs.lib.nixosSystem {
             inherit system;
@@ -52,6 +56,7 @@
                 home-manager.extraSpecialArgs = specialArgs;
                 home-manager.users.${username} = import ./users/${username}/home.nix;
               }
+              nixpkgsConfig
             ];
           };
       };
