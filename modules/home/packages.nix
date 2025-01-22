@@ -1,6 +1,5 @@
 { pkgs, ... }:
 
 {
-  home.packages = [
-  ];
+  home.packages = [];
 }

@@ -28,6 +28,7 @@ config.initial_rows = 30
 config.initial_cols = 120
 
 config.window_background_opacity = 0.7
+config.macos_window_background_blur = 50
 
 config.default_cursor_style = 'BlinkingUnderline'
 config.cursor_blink_rate = 400

@@ -24,37 +24,30 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  }@inputs:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
   let
-    system = "x86_64-linux";
+    username = "cte";
     nixpkgsConfig = {
-      nixpkgs.overlays = [
-        inputs.hyprpanel.overlay
-      ];
+      nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
       nixpkgs.config.allowUnfree = true;
     };
   in
     {
       nixosConfigurations = {
         dusk = let
-          username = "cte";
+          system = "x86_64-linux";
           specialArgs = { inherit inputs username; };
         in
           nixpkgs.lib.nixosSystem {
-            inherit system;
-            inherit specialArgs;
+            inherit system specialArgs;
+
             modules = [
               ./hosts/dusk
               home-manager.nixosModules.home-manager {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = specialArgs;
-                home-manager.users.${username} = import ./users/${username}/home.nix;
+                home-manager.users.${username} = import ./hosts/dusk/home.nix;
               }
               nixpkgsConfig
             ];

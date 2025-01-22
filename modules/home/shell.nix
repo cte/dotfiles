@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 
 let
-  configDir = "/home/${username}/dotfiles";
+  configDir = "~/dotfiles";
 in {
   # https://mynixos.com/home-manager/options/programs.zsh
   programs.zsh = {
@@ -18,9 +18,11 @@ in {
       psg = "ps -ef | grep -v grep | grep $*";
       getpid = "getpid() { ps -ef | grep -v grep | grep \"$1\" | awk '{print $2}'; }; getpid";
       lspid = "lspid() { ps -ef | grep -v grep | grep $* | awk '{ printf $2 \" \"; for (i = 8; i < NF; i++) printf $i \" \"; print $NF }'; }; lspid";
-      ports="sudo ss -lptn";
+      ports = "sudo ss -lptn";
       gogh = "bash -c \"$(wget -qO- https://git.io/vQgMr)\"";
-      update = "sudo nixos-rebuild switch --flake ${configDir}";
+      update = if pkgs.stdenv.isDarwin 
+        then "darwin-rebuild switch --flake ${configDir}/hosts/nyx#nyx"
+        else "sudo nixos-rebuild switch --flake ${configDir}";
     };
 
     initExtra = ''

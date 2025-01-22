@@ -3,9 +3,9 @@
 {
   imports =
     [
-      ../../modules/system.nix
-      ../../modules/nvidia.nix
-      ../../modules/packages.nix
+      ../../modules/linux/system.nix
+      ../../modules/linux/nvidia.nix
+      ../../modules/linux/packages.nix
       ./hardware-configuration.nix
     ];
 

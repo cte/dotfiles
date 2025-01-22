@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-dirs=("bin" "btop" "cava" "code" "cursor" "fonts" "hypr" "hyprpanel" "kitty" "nvim" "rofi" "starship" "wezterm")
+# Usage:
+# ./install.sh kitty wezterm ...
+
+if [ $# -eq 0 ]; then
+    echo "Error: No directories specified"
+    echo "Usage: $0 dir1 dir2 ..."
+    exit 1
+fi
+
+dirs=("$@")
 
 for dir in "${dirs[@]}"; do
   echo $dir
