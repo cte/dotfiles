@@ -30,6 +30,8 @@ config.initial_cols = 120
 config.window_background_opacity = 0.7
 config.macos_window_background_blur = 50
 
+config.window_decorations = 'RESIZE'
+
 config.default_cursor_style = 'BlinkingUnderline'
 config.cursor_blink_rate = 400
 config.cursor_blink_ease_in = 'Linear'
@@ -52,6 +54,16 @@ config.window_frame = {
   active_titlebar_bg = '#222222',
   inactive_titlebar_bg = '#222222',
 }
+
+wezterm.on('update-status', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  if window:is_focused() then
+    overrides.color_scheme = 'Catppuccin Macchiato'
+  else
+    overrides.color_scheme = 'Catppuccin Mocha'
+  end
+  window:set_config_overrides(overrides)
+end)
 
 config.colors = {
   tab_bar = {

@@ -6,7 +6,7 @@
   "editor.inlineSuggest.enabled": true,
 
   "editor.fontFamily": "Monaspace Neon Var",
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontVariations": "'wght' 300",
   "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
