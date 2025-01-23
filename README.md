@@ -2,15 +2,7 @@
 
 ### Getting Started
 
-Add channels:
-
-```sh
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-sudo nix-channel --update
-
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-```
+#### NixOS / Linux:
 
 Clone repo and add hardware configuration:
 
@@ -22,8 +14,6 @@ cp /etc/nixos/hardware-configuration.nix ./hosts/dusk
 git add .
 exit
 ```
-
-Alternatively, you can can create a new host configuration using the example set by `dusk`.
 
 Rebuild:
 
@@ -41,9 +31,13 @@ sudo reboot
 Symlink dotfiles:
 
 ```sh
-cd ~/dotfiles/config
-./install.sh
+cd ~/dotfiles/hosts/dusk
+./config.sh
 ```
+
+#### Nix / Darwin
+
+... TODO ...
 
 ### Resources
 
