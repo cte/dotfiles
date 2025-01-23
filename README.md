@@ -18,22 +18,16 @@ exit
 Rebuild:
 
 ```sh
-cd ~/dotfiles
-sudo nixos-rebuild switch --flake .#dusk
+sudo nixos-rebuild switch --flake ~/dotfiles#dusk
 ```
 
-Reboot:
+Install config:
 
 ```sh
-sudo reboot
+~/dotfiles/hosts/dusk/config.sh
 ```
 
-Symlink dotfiles:
-
-```sh
-cd ~/dotfiles/hosts/dusk
-./config.sh
-```
+Reboot if necessary.
 
 #### Nix / Darwin
 
