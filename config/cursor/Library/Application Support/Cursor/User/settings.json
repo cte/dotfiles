@@ -11,7 +11,7 @@
   "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
   "terminal.integrated.fontFamily": "NotoSansM Nerd Font Mono",
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
 
   "files.autoSave": "onFocusChange",
