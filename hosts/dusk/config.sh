@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ../../config && ./install.sh \
+cd ~/dotfiles/config && ./install.sh \
   bin \
   btop \
   cava \
