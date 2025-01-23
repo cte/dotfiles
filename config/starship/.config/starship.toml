@@ -8,7 +8,9 @@ $directory\
 [](fg:sky bg:mauve)\
 $git_branch\
 $git_status\
-[](fg:mauve bg:maroon)\
+[](fg:mauve bg:pink)\
+$nix_shell\
+[](fg:pink bg:maroon)\
 $status\
 [](fg:maroon bg:yellow)\
 $cmd_duration\
@@ -91,6 +93,11 @@ staged = '+$count '
 deleted = '-$count '
 renamed = '±$count '
 format = "[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:mauve_light bg:mauve)"
+
+[nix_shell]
+format = '[ $symbol$name ](fg:pink_light bg:pink)'
+
+symbol = ' '
 
 [status]
 format = "[ ](fg:maroon_light bg:maroon)[ $status ](fg:maroon_light bg:maroon)"
