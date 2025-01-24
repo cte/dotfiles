@@ -37,8 +37,6 @@ config.cursor_blink_rate = 400
 config.cursor_blink_ease_in = 'Linear'
 config.cursor_blink_ease_out = 'Linear'
 
-config.color_scheme = 'Catppuccin Mocha'
-
 config.font = font
 config.font_size = font_size
 

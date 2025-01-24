@@ -1,0 +1,13 @@
+font-family = NotoSansM Nerd Font Mono
+font-size = 16
+theme = catppuccin-macchiato
+shell-integration-features = no-cursor,sudo,no-title
+
+macos-titlebar-style = tabsez
+
+cursor-style = underline
+
+background-opacity = 0.5
+background-blur-radius = 50
+
+window-padding-x = 10
