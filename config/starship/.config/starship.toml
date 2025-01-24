@@ -10,6 +10,7 @@ $git_branch\
 $git_status\
 [](fg:mauve bg:pink)\
 $nix_shell\
+$nodejs\
 [](fg:pink bg:maroon)\
 $status\
 [](fg:maroon bg:yellow)\
@@ -95,9 +96,10 @@ renamed = '±$count '
 format = "[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:mauve_light bg:mauve)"
 
 [nix_shell]
-format = '[ $symbol$name ](fg:pink_light bg:pink)'
+format = '[ ](fg:pink_light bg:pink)[ $name ](fg:pink_light bg:pink)'
 
-symbol = ' '
+[nodejs]
+format = '[ 󰎙](fg:pink_light bg:pink)[ $version ](fg:pink_light bg:pink)'
 
 [status]
 format = "[ ](fg:maroon_light bg:maroon)[ $status ](fg:maroon_light bg:maroon)"
@@ -121,22 +123,3 @@ disabled = false
 success_symbol = "[](fg:#a6d189)"
 error_symbol = "[](fg:#ea999c)"
 
-# [conda]
-# symbol = ' '
-# style = 'bold green'
-# format = '[$symbol$environment]($style) '
-
-# [python]
-# symbol = ' '
-# style = 'bold green'
-# format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-
-# [ruby]
-# symbol = ' '
-# style = 'bold green'
-# format = '[$symbol($version )]($style)'
-
-# [nodejs]
-# symbol = '󰎙 '
-# style = 'bold green'
-# format = '[$symbol($version )]($style)'
