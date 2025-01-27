@@ -16,14 +16,18 @@
 
     # Shell
     zinit
-
-    # Hyprland
     btop
     stow
     nitch
   ];
 
   programs.zsh.enable = true;
+
+  # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs; # only for NixOS 24.05
+  }; 
 
   documentation.nixos.enable = false;
 
