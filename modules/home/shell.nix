@@ -42,11 +42,6 @@ in {
       setopt hist_save_no_dups;
       setopt hist_ignore_dups;
       setopt hist_find_no_dups;
-      autoload -Uz history-search-end
-      zle -N history-beginning-search-backward-end history-search-end
-      zle -N history-beginning-search-forward-end history-search-end
-      bindkey "$terminfo[kcuu1]" history-beginning-search-backward-end
-      bindkey "$terminfo[kcud1]" history-beginning-search-forward-end
 
       # Zinit - https://github.com/zdharma-continuum/zinit
       # https://www.youtube.com/watch?v=ud7YxC33Z3w
@@ -62,10 +57,10 @@ in {
       zinit light Aloxaf/fzf-tab
 
       # Snippets
-      zinit snippet OMZP::git
-      zinit snippet OMZP::sudo
-      zinit snippet OMZP::aws
-      zinit snippet OMZP::command-not-found
+      # zinit snippet OMZP::git
+      # zinit snippet OMZP::sudo
+      # zinit snippet OMZP::aws
+      # zinit snippet OMZP::command-not-found
 
       # Completions
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -75,6 +70,17 @@ in {
       autoload -Uz compinit && compinit
 
       zinit cdreplay -q
+
+      # Bindings
+
+      # bindkey "^[[A" up-line-or-search
+      # bindkey "^[[B" down-line-or-search
+      autoload -U up-line-or-beginning-search
+      autoload -U down-line-or-beginning-search
+      zle -N up-line-or-beginning-search
+      zle -N down-line-or-beginning-search
+      bindkey "^[[A" up-line-or-beginning-search
+      bindkey "^[[B" down-line-or-beginning-search
 
       # If a glob pattern doesn't match any files, it expands to nothing (empty list)
       setopt nullglob
