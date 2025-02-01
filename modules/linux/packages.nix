@@ -31,7 +31,7 @@
 
     # Terminals
     wezterm
-    kitty
+    ghostty
 
     # Shell
     zinit
