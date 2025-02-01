@@ -3,9 +3,10 @@ font-size = 16
 theme = catppuccin-macchiato
 shell-integration-features = no-cursor,sudo,no-title
 
-macos-titlebar-style = tabsez
+macos-titlebar-style = tabs
 
-cursor-style = underline
+cursor-color = #FFE5B4
+cursor-style = bar
 
 background-opacity = 0.5
 background-blur-radius = 50

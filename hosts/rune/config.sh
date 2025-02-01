@@ -3,7 +3,7 @@
 cd ~/dotfiles/config && ./install.sh \
   btop \
   cursor \
-  kitty \
+  ghostty \
   nvim \
   starship \
   wezterm
