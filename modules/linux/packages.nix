@@ -24,7 +24,10 @@
     neovim
     ripgrep
     killall
+
+    # LLM Hosting
     ngrok
+    open-webui
 
     # Audio
     pavucontrol
