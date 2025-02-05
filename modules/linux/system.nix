@@ -83,6 +83,13 @@
   # real-time scheduling priorities in a secure way.
   security.rtkit.enable = true;
 
+  # ngrok tcp --region=us --remote-addr=9.tcp.ngrok.io:25693 22
+  # ssh -p 25693 cte@9.tcp.ngrok.io
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = true;
+  };
+
   services.ollama = {
     enable = true;
     acceleration = "cuda";
