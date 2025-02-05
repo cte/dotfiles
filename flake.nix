@@ -1,8 +1,16 @@
 # cd ~/dotfiles
+#
+# Update non-flake package versions:
+# nix-channel --update
+#
+# Update flakes:
 # nix flake update
+#
+# Rebuild:
 # sudo nixos-rebuild switch --flake .
 # update
-# nix-channel --update
+#
+# Clean:
 # nix-collect-garbage -d
 # sudo nix-collect-garbage -d
 {

@@ -82,4 +82,9 @@
   # RTKit is a real-time scheduling service that allows applications (particularly audio applications) to request
   # real-time scheduling priorities in a secure way.
   security.rtkit.enable = true;
+
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
 }

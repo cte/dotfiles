@@ -24,6 +24,7 @@
     neovim
     ripgrep
     killall
+    ngrok
 
     # Audio
     pavucontrol
