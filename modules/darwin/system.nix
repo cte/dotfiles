@@ -1,5 +1,5 @@
 # https://daiderd.com/nix-darwin/manual/index.html#sec-options
-{ pkgs, username, ... }:
+{ pkgs, username, hostname, ... }:
 
 {
   # Users
@@ -44,7 +44,7 @@
   # Add ability to used TouchID for sudo authentication.
   security.pam.enableSudoTouchIdAuth = true;
 
-  networking.hostName = "nyx";
-  networking.computerName = "nyx";
-  system.defaults.smb.NetBIOSName = "nyx";
+  networking.hostName = "${hostname}";
+  networking.computerName = "${hostname}";
+  system.defaults.smb.NetBIOSName = "${hostname}";
 }

@@ -27,12 +27,13 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
   let
     username = "cte";
+    hostname = "nyx";
   in
     {
       darwinConfigurations = {
         nyx = let
           system = "aarch64-darwin";
-          specialArgs = { inherit inputs username; };
+          specialArgs = { inherit inputs username hostname; };
         in
           nix-darwin.lib.darwinSystem {
             inherit system specialArgs;
