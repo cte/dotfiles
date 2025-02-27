@@ -1,6 +1,27 @@
 local wezterm = require 'wezterm'
 
--- globals
+-- start config
+
+local config = {}
+
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+-- window
+
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 50
+-- config.window_decorations = 'RESIZE'
+
+-- cursor
+
+config.default_cursor_style = 'BlinkingUnderline'
+config.cursor_blink_rate = 400
+config.cursor_blink_ease_in = 'Linear'
+config.cursor_blink_ease_out = 'Linear'
+
+-- font
 
 -- local font_family = 'Operator Mono SSm Lig Medium'
 -- local font_family = 'Berkeley Mono'
@@ -13,97 +34,17 @@ local font_family = 'NotoSansM Nerd Font Mono'
 local font_size = 16
 local font = wezterm.font({ family = font_family, weight = 'Medium' })
 
--- config
-
-local config = {}
-
-if wezterm.config_builder then
-  config = wezterm.config_builder()
-end
-
--- config.front_end = "WebGpu"
-config.enable_wayland = false
-
-config.initial_rows = 30
-config.initial_cols = 120
-
-config.window_background_opacity = 0.7
-config.macos_window_background_blur = 50
-
-config.window_decorations = 'RESIZE'
-
-config.default_cursor_style = 'BlinkingUnderline'
-config.cursor_blink_rate = 400
-config.cursor_blink_ease_in = 'Linear'
-config.cursor_blink_ease_out = 'Linear'
-
 config.font = font
 config.font_size = font_size
 
--- tabs, title
+-- color scheme
 
-config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
-config.tab_bar_at_bottom = false
+config.color_scheme = 'Hardcore'
 
-config.window_frame = {
-  font = font,
-  font_size = font_size,
-  active_titlebar_bg = '#222222',
-  inactive_titlebar_bg = '#222222',
-}
+-- tab bar
 
-wezterm.on('update-status', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  if window:is_focused() then
-    overrides.color_scheme = 'Catppuccin Macchiato'
-  else
-    overrides.color_scheme = 'Catppuccin Mocha'
-  end
-  window:set_config_overrides(overrides)
-end)
-
-config.colors = {
-  tab_bar = {
-    inactive_tab_edge = '#222222',
-    inactive_tab = {
-      bg_color = '#222222',
-      fg_color = '#666666',      
-    },
-    inactive_tab_hover = {
-      bg_color = '#222222',
-      fg_color = '#999999',
-    },      
-    active_tab = {
-      bg_color = '#222222',
-      fg_color = '#ffffff',      
-    },
-    new_tab = {
-      bg_color = '#222222',
-      fg_color = '#999999',
-    },
-    new_tab_hover = {
-      bg_color = '#222222',
-      fg_color = '#ffffff',
-    },
-  },
-}
-
-function tab_title(tab)
-  local title = tab.tab_title
-
-  if title and #title > 0 then
-    return title
-  end
-
-  return tab.active_pane.title
-end
-
-wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
-  return {
-    { Text = ' [ ' .. tab_title(tab) .. ' ] ' },
-  }
-end)
+local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+bar.apply_to_config(config)
 
 -- key bindings
 
