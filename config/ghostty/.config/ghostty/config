@@ -1,9 +1,10 @@
 font-family = NotoSansM Nerd Font Mono
 font-size = 16
 theme = catppuccin-macchiato
-shell-integration-features = no-cursor,sudo,no-title
+shell-integration = zsh
+# shell-integration-features = no-cursor,sudo,no-title
 
-macos-titlebar-style = tabs
+# macos-titlebar-style = tabs
 
 scrollback-limit = 10_000
 window-theme = ghostty
