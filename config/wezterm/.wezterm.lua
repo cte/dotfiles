@@ -31,7 +31,7 @@ config.cursor_blink_ease_out = 'Linear'
 -- local font_family = 'SpaceMono Nerd Font'
 local font_family = 'NotoSansM Nerd Font Mono'
 -- local font_family = 'Monaspace Argon'
-local font_size = 16
+local font_size = 14
 local font = wezterm.font({ family = font_family, weight = 'Medium' })
 
 config.font = font
