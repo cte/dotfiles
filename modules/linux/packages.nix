@@ -34,7 +34,6 @@
     spotify
 
     # Terminals
-    wezterm
     ghostty
 
     # Shell
@@ -47,7 +46,6 @@
     dropbox
     vscode
     code-cursor
-    slack
 
     # Hyprland
     hyprpaper
@@ -60,7 +58,6 @@
     cava
     stow
     nitch
-    spicetify-cli
     vesktop
 
     # Gnome

@@ -17,12 +17,14 @@
 
       "org/gnome/shell" = {
         favorite-apps = [
-          "org.wezfurlong.wezterm.desktop"
+          "com.mitchellh.ghostty.desktop"
           "firefox.desktop"
           "1password.desktop"
           "code.desktop"
           "cursor.desktop"
           "dropbox.desktop"
+          "spotify.desktop"
+          "vesktop.desktop"
         ];
         disable-user-extensions = false;
         enabled-extensions = [

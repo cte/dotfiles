@@ -13,5 +13,4 @@ cd ~/dotfiles/config && ./install.sh \
   hyprpanel \
   nvim \
   rofi \
-  starship \
-  wezterm
+  starship

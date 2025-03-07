@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# ./install.sh kitty wezterm ...
+# ./install.sh <package> <package> ...
 
 if [ $# -eq 0 ]; then
     echo "Error: No directories specified"
