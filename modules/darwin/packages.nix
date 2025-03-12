@@ -26,7 +26,6 @@
 
     # Terminals
     wezterm
-    kitty
 
     # Shell
     zinit
@@ -38,8 +37,11 @@
     # nitch - Not available on macOS.
     neofetch
 
-    # WM
-    aerospace
+    # Programming
+    rustc
+    cargo
+    go
+    jdk
   ];
 
   programs.zsh.enable = true;
