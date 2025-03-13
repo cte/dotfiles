@@ -23,6 +23,7 @@
     neovim
     ripgrep
     # killall - Already comes with macOS.
+    watch
 
     # Terminals
     wezterm
