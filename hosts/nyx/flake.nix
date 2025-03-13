@@ -3,7 +3,7 @@
 # nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#nyx
 #
 # Update:
-# darwin-rebuild switch --flake .#nyx
+# darwin-rebuild switch --flake ~/dotfiles/hosts/nyx#nyx
 
 {
   description = "Nix for macOS configuration";
