@@ -43,6 +43,7 @@
     cargo
     go
     jdk
+    cmake
   ];
 
   programs.zsh.enable = true;
