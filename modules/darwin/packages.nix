@@ -24,6 +24,7 @@
     ripgrep
     # killall - Already comes with macOS.
     watch
+    coreutils # timeout, etc
 
     # Terminals
     wezterm
