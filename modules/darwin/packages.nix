@@ -45,6 +45,7 @@
     go
     jdk
     cmake
+    uv
   ];
 
   programs.zsh.enable = true;
