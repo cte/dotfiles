@@ -6,14 +6,32 @@
   "editor.inlineSuggest.enabled": true,
 
   "editor.fontFamily": "NotoSansM Nerd Font Mono",
-  "editor.fontSize": 14,
   // "editor.fontFamily": "Monaspace Neon Var",
-  // "editor.fontSize": 16,
+  // "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontSize": 12,
   // "editor.fontVariations": "'wght' 300",
   // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
-  "terminal.integrated.fontFamily": "NotoSansM Nerd Font Mono",
-  "terminal.integrated.fontSize": 14,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.line.double-slash",
+          "comment.block.documentation",
+          "punctuation.definition.comment",
+          "variable.parameter",
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+
+  // "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
 
@@ -26,23 +44,10 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
 
-  "workbench.colorTheme": "One Hunter Theme",
-  "workbench.iconTheme": "catppuccin-macchiato",
-
   "window.zoomLevel": 1,
+  "window.commandCenter": true,
 
-  "catppuccin.italicKeywords": false,
-  "catppuccin.italicComments": false,
-  "catppuccin.accentColor": "peach",
-
-  "roo-cline.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ],
+  "workbench.navigationControl.enabled": false,
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -56,4 +61,14 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
+  "roo-cline.allowedCommands": [
+    "*"
+  ],
+  "workbench.iconTheme": "symbols",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "poimandres-noitalics",
 }

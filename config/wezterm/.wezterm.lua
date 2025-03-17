@@ -10,7 +10,7 @@ end
 
 -- window
 
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.5
 config.macos_window_background_blur = 50
 -- config.window_decorations = 'RESIZE'
 
@@ -26,12 +26,12 @@ config.cursor_blink_ease_out = 'Linear'
 -- local font_family = 'Operator Mono SSm Lig Medium'
 -- local font_family = 'Berkeley Mono'
 -- local font_family = 'Input'
--- local font_family = 'GeistMono Nerd Font'
+local font_family = 'GeistMono Nerd Font'
 -- local font_family = 'JetBrainsMono Nerd Font'
 -- local font_family = 'SpaceMono Nerd Font'
-local font_family = 'NotoSansM Nerd Font Mono'
+-- local font_family = 'NotoSansM Nerd Font Mono'
 -- local font_family = 'Monaspace Argon'
-local font_size = 14
+local font_size = 16
 local font = wezterm.font({ family = font_family, weight = 'Medium' })
 
 config.font = font
