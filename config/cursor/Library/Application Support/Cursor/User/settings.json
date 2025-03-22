@@ -8,9 +8,10 @@
   "editor.fontFamily": "NotoSansM Nerd Font Mono",
   // "editor.fontFamily": "Monaspace Neon Var",
   // "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-  "editor.fontSize": 12,
-  // "editor.fontVariations": "'wght' 300",
-  // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+  "editor.fontSize": 13,
+  // "editor.fontWeight": "300",
+  // "editor.fontVariations": "'wght' 250",
+  "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -20,7 +21,7 @@
           "comment.line.double-slash",
           "comment.block.documentation",
           "punctuation.definition.comment",
-          "variable.parameter",
+          "variable.parameter"
         ],
         "settings": {
           "fontStyle": ""
@@ -29,8 +30,8 @@
     ]
   },
 
-  // "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -44,16 +45,18 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
 
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "window.commandCenter": true,
 
   "workbench.navigationControl.enabled": false,
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "poimandres-noitalics",
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -61,14 +64,11 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  "roo-cline.allowedCommands": [
-    "*"
-  ],
-  "workbench.iconTheme": "symbols",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.statusBar.visible": false,
-  "workbench.colorTheme": "poimandres-noitalics",
+
+  "roo-cline.allowedCommands": [
+    "*"
+  ]
 }
