@@ -2,22 +2,15 @@
 { pkgs, username, hostname, ... }:
 
 {
-  # Users
-
   users.users."${username}"= {
-    # name = "${username}";
     description = username;
     home = "/Users/${username}";
   };
-
-  # users.defaultUserShell = pkgs.zsh;
 
   nix.settings = {
     trusted-users = [ username ];
     experimental-features = [ "nix-command" "flakes" ];
   };
-
-  # ...
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
@@ -46,5 +39,6 @@
 
   networking.hostName = "${hostname}";
   networking.computerName = "${hostname}";
+
   system.defaults.smb.NetBIOSName = "${hostname}";
 }

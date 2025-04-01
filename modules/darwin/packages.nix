@@ -39,13 +39,13 @@
     # nitch - Not available on macOS.
     neofetch
 
-    # Programming
-    rustc
-    cargo
-    go
-    jdk
-    cmake
-    uv
+    # evals
+    # rustc
+    # cargo
+    # go
+    # jdk
+    # cmake
+    # uv
   ];
 
   programs.zsh.enable = true;
