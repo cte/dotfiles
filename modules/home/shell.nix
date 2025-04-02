@@ -122,5 +122,5 @@ in {
   programs.zoxide.enable = true;
   programs.eza.enable = true;
   programs.bat.enable = true;
-  programs.gh.enable = true;
+  # programs.gh.enable = true;
 }
