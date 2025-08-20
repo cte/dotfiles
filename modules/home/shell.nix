@@ -22,7 +22,7 @@ in {
       ports = "sudo ss -lptn";
       gogh = "bash -c \"$(wget -qO- https://git.io/vQgMr)\"";
       update = if pkgs.stdenv.isDarwin 
-        then "darwin-rebuild switch --flake ${configDir}/hosts/${hostname}#${hostname}"
+        then "NIXPKGS_ALLOW_UNFREE=1 darwin-rebuild switch --flake ${configDir}/hosts/${hostname}#${hostname} --impure"
         else "sudo nixos-rebuild switch --flake ${configDir}";
     };
 

@@ -2,7 +2,7 @@
 # nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake cd ~/dotfiles/hosts/void#void
 #
 # Update:
-# darwin-rebuild switch --flake ~/dotfiles/hosts/void#void
+# NIXPKGS_ALLOW_UNFREE=1 darwin-rebuild switch --flake ~/dotfiles/hosts/void#void --impure
 
 {
   description = "Nix for macOS configuration";

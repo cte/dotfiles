@@ -2,7 +2,7 @@
 # nix run sudo nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/hosts/sigil#sigil
 #
 # Update:
-# darwin-rebuild switch --flake ~/dotfiles/hosts/sigil#sigil
+# NIXPKGS_ALLOW_UNFREE=1 darwin-rebuild switch --flake ~/dotfiles/hosts/sigil#sigil --impure
 
 {
   description = "Nix for macOS configuration";
