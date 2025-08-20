@@ -10,8 +10,8 @@ end
 
 -- window
 
-config.window_background_opacity = 0.5
-config.macos_window_background_blur = 50
+-- config.window_background_opacity = 0.5
+-- config.macos_window_background_blur = 50
 -- config.window_decorations = 'RESIZE'
 
 -- cursor
