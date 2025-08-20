@@ -39,14 +39,14 @@
     # nitch - Not available on macOS.
     neofetch
 
-    # evals
-    # rustc
-    # cargo
-    # go
-    # jdk
-    # cmake
-    # uv
+    # Work
+    gh
   ];
+
+  # Other software to check for nix integration:
+  # - Raycast
+  # - 1Password
+  # - Slack
 
   programs.zsh.enable = true;
 }
