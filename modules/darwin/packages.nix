@@ -40,6 +40,7 @@
     neofetch
 
     # Work
+    asdf-vm
     gh
   ];
 
