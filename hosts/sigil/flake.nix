@@ -1,8 +1,8 @@
 # Bootstrap:
-# nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/hosts/nyx#nyx
+# nix run sudo nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/hosts/sigil#sigil
 #
 # Update:
-# darwin-rebuild switch --flake ~/dotfiles/hosts/nyx#nyx
+# darwin-rebuild switch --flake ~/dotfiles/hosts/sigil#sigil
 
 {
   description = "Nix for macOS configuration";
@@ -26,11 +26,11 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
   let
     username = "cte";
-    hostname = "nyx";
+    hostname = "sigil";
   in
     {
       darwinConfigurations = {
-        nyx = let
+        sigil = let
           system = "aarch64-darwin";
           specialArgs = { inherit inputs username hostname; };
         in

@@ -31,7 +31,7 @@ Reboot if necessary.
 
 #### Nix / Darwin
 
-... TODO ...
+See hosts/[host]/flake.nix.
 
 ### Resources
 

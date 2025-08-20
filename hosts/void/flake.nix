@@ -1,6 +1,5 @@
 # Bootstrap:
-# cd ~/dotfiles/hosts/nyx
-# nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#void
+# nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake cd ~/dotfiles/hosts/void#void
 #
 # Update:
 # darwin-rebuild switch --flake ~/dotfiles/hosts/void#void

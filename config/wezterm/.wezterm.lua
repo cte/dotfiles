@@ -31,7 +31,7 @@ local font_family = 'GeistMono Nerd Font'
 -- local font_family = 'SpaceMono Nerd Font'
 -- local font_family = 'NotoSansM Nerd Font Mono'
 -- local font_family = 'Monaspace Argon'
-local font_size = 16
+local font_size = 18
 local font = wezterm.font({ family = font_family, weight = 'Medium' })
 
 config.font = font
