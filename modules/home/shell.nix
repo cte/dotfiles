@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, username, hostname, ... }:
 
 let
   configDir = "~/dotfiles";
@@ -13,6 +13,7 @@ in {
       cp = "cp -iv";
       rm = "rm -iv";
       ".." = "cd ..";
+      vi = "nvim";
       cat = "bat";
       screen = "TERM=screen screen";
       psg = "ps -ef | grep -v grep | grep $*";
@@ -21,7 +22,7 @@ in {
       ports = "sudo ss -lptn";
       gogh = "bash -c \"$(wget -qO- https://git.io/vQgMr)\"";
       update = if pkgs.stdenv.isDarwin 
-        then "darwin-rebuild switch --flake ${configDir}/hosts/nyx#nyx"
+        then "darwin-rebuild switch --flake ${configDir}/hosts/${hostname}#${hostname}"
         else "sudo nixos-rebuild switch --flake ${configDir}";
     };
 
