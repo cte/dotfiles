@@ -30,8 +30,8 @@
     ]
   },
 
-  "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
-  // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -50,7 +50,7 @@
 
   "workbench.navigationControl.enabled": false,
   "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "poimandres-noitalics",
+  "workbench.colorTheme": "One Hunter Theme Material",
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -68,7 +68,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "roo-cline.allowedCommands": [
+  "roo-cline.allowedCommands": ["*"],
+
+  "roo-code-nightly.allowedCommands": [
     "*"
-  ]
+  ],
+  "roo-code-nightly.deniedCommands": []
 }
