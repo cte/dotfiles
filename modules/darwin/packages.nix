@@ -46,14 +46,24 @@
     gh
 
     # Desktop
+    spotify
+    discord
     vscode
     slack
-    discord
   ];
 
   # Other software to check for nix integration:
   # - Raycast
   # - 1Password
+  # - Cursor
+  # - Dropbox
+  # - Docker Desktop
+  # - Firefox
+  # - Screen Studio
+  # - DataGrip
+  # - Notion Mail
+  # - Yaak
+  # - Zoom
 
   programs.zsh.enable = true;
 }
