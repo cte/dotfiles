@@ -11,7 +11,7 @@
   "editor.fontSize": 13,
   // "editor.fontWeight": "300",
   // "editor.fontVariations": "'wght' 250",
-  "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+  // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -30,8 +30,8 @@
     ]
   },
 
-  // "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -46,11 +46,10 @@
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
 
   "window.zoomLevel": 2,
-  "window.commandCenter": true,
 
   "workbench.navigationControl.enabled": false,
-  "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "One Hunter Theme Material",
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.colorTheme": "Bearded Theme Altica",
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -68,10 +67,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "roo-cline.allowedCommands": ["*"],
-
   "roo-code-nightly.allowedCommands": [
     "*"
   ],
-  "roo-code-nightly.deniedCommands": []
+  "roo-code-nightly.deniedCommands": [],
+  "editor.minimap.enabled": true
 }
