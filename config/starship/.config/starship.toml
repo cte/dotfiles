@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = 'default'
+palette = 'hardcore'
 
 format = """
 $git_branch$git_status\
@@ -12,16 +12,17 @@ $directory\
 $character\
 """
 
-[palettes.default]
+# https://gogh-co.github.io/Gogh/
+[palettes.hardcore]
 success = "#a6e22e"
-error = "#e0115f"
+error = "#f92672"
 separator = "#333333"
 username = "#a6e22e"
 hostname = "#a6e22e"
 directory = "#999999"
 git = "#666666"
-environment = "#333333"
-cmd_duration = "#a6e22e"
+environment = "#444444"
+cmd_duration = "#fd971f"
 
 # [username]
 # show_always = true
@@ -56,12 +57,12 @@ format = '[󰎙 ](fg:environment)[$version](fg:environment) '
 
 # https://starship.rs/config/#status
 [status]
-format = "[](fg:error)[$status](fg:error) "
+format = "[ ](fg:error)[$status](fg:error) "
 disabled = false
 
 # https://starship.rs/config/#command-duration
 [cmd_duration]
-format = "[󱐋](fg:cmd_duration)[$duration](fg:cmd_duration) "
+format = "[󱐋 ](fg:cmd_duration)[$duration](fg:cmd_duration) "
 min_time = 100
 show_milliseconds = true
 
