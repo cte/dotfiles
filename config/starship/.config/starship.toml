@@ -34,22 +34,22 @@ cmd_duration = "#fd971f"
 
 # https://starship.rs/config/#git-branch
 [git_branch]
-format = "[](fg:git)[ $branch(:$remote_branch )](fg:git) "
+format = "[ ](fg:git)[$branch(:$remote_branch)](fg:git) "
 
 # https://starship.rs/config/#git-status
 [git_status]
 diverged = '󰃻 +$ahead_count -$behind_count '
 ahead = '⇡ $count '
 behind = '⇣ $count '
-# up_to_date = '󰾨 '
+up_to_date = '󰾨 '
 conflicted = '󰈻 '
 stashed = ' $count '
-modified = '$count! '
-untracked = '$count? '
-staged = '+$count '
-deleted = '-$count '
-renamed = '±$count '
-format = "[$ahead_behind$conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:git)"
+modified = ' $count '
+untracked = ' $count '
+staged = ' $count '
+deleted = ' $count '
+renamed = ' $count '
+# format = "[$ahead_behind$conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:git)"
 
 # https://starship.rs/config/#node-js
 [nodejs]
