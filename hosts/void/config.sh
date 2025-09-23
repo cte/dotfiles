@@ -5,4 +5,5 @@ cd ~/dotfiles/config && ./install.sh \
   cursor \
   nvim \
   starship \
-  wezterm
+  wezterm \
+  ghostty

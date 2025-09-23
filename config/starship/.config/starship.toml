@@ -1,125 +1,77 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = 'catppuccin_latte'
+palette = 'default'
 
 format = """
-[](fg:sky)\
-$directory\
-[](fg:sky bg:mauve)\
-$git_branch\
-$git_status\
-[](fg:mauve bg:pink)\
-$nix_shell\
+$git_branch$git_status\
 $nodejs\
-[](fg:pink bg:maroon)\
 $status\
-[](fg:maroon bg:yellow)\
 $cmd_duration\
-[](fg:yellow)\
 $line_break\
+$directory\
 $character\
 """
 
-[palettes.catppuccin_latte]
-rosewater = "#dc8a78"
-rosewater_light = "#f5e0dc"
-flamingo = "#dd7878"
-flamingo_light = "#f2cdcd"
-pink = "#ea76cb"
-pink_light = "#f5c2e7"
-orange = "#cba6f7"
-mauve = "#8839ef"
-mauve_light = "#cba6f7"
-red = "#d20f39"
-red_light = "#f38ba8"
-maroon = "#e64553"
-maroon_light = "#eba0ac"
-peach = "#fe640b"
-peach_light = "#fab387"
-yellow = "#df8e1d"
-yellow_light = "#f9e2af"
-green = "#40a02b"
-green_light = "#a6e3a1"
-teal = "#179299"
-teal_light = "#94e2d5"
-sky = "#04a5e5"
-sky_light = "#89dceb"
-sapphire = "#209fb5"
-sapphire_light = "#74c7ec"
-blue = "#1e66f5"
-blue_light = "#89b4fa"
-lavender = "#7287fd"
-lavender_light = "#b4befe"
-text = "#4c4f69"
-subtext1 = "#5c5f77"
-subtext0 = "#6c6f85"
-overlay2 = "#7c7f93"
-overlay1 = "#8c8fa1"
-overlay0 = "#9ca0b0"
-surface2 = "#acb0be"
-surface1 = "#bcc0cc"
-surface0 = "#ccd0da"
-base = "#eff1f5"
-mantle = "#e6e9ef"
-mantle_light = "#181825"
-crust = "#dce0e8"
-bg = "#181825"
+[palettes.default]
+success = "#a6e22e"
+error = "#e0115f"
+separator = "#333333"
+username = "#a6e22e"
+hostname = "#a6e22e"
+directory = "#999999"
+git = "#666666"
+environment = "#333333"
+cmd_duration = "#a6e22e"
 
 # [username]
 # show_always = true
-# format = "[ $user ](fg:text bg:bg)"
+# format = "[$user](fg:username)[@](fg:separator)"
 
 # [hostname]
 # ssh_only = false
-# format = "[ $ssh_symbol$hostname ](fg:flamingo_light bg:flamingo)"
+# format = "[$ssh_symbol$hostname](fg:hostname) "
 
-[directory]
-format = "[$path ](fg:sky_light bg:sky)"
-truncate_to_repo = true
-truncation_length = 2
-
+# https://starship.rs/config/#git-branch
 [git_branch]
-format = "[ ](fg:mauve_light bg:mauve)[ $branch(:$remote_branch )](fg:mauve_light bg:mauve)"
+format = "[](fg:git)[ $branch(:$remote_branch )](fg:git) "
 
+# https://starship.rs/config/#git-status
 [git_status]
 diverged = '󰃻 +$ahead_count -$behind_count '
-ahead = '⇡$count '
-behind = '⇣$count '
-up_to_date = ' 󰾨 '
-conflicted = ' 󰈻 '
-stashed = ' $count '
+ahead = '⇡ $count '
+behind = '⇣ $count '
+# up_to_date = '󰾨 '
+conflicted = '󰈻 '
+stashed = ' $count '
 modified = '$count! '
 untracked = '$count? '
 staged = '+$count '
 deleted = '-$count '
 renamed = '±$count '
-format = "[$ahead_behind $conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:mauve_light bg:mauve)"
+format = "[$ahead_behind$conflicted$stashed$modified$untracked$staged$deleted$renamed](fg:git)"
 
-[nix_shell]
-format = '[ ](fg:pink_light bg:pink)[ $name ](fg:pink_light bg:pink)'
-
+# https://starship.rs/config/#node-js
 [nodejs]
-format = '[ 󰎙](fg:pink_light bg:pink)[ $version ](fg:pink_light bg:pink)'
+format = '[󰎙 ](fg:environment)[$version](fg:environment) '
 
+# https://starship.rs/config/#status
 [status]
-format = "[ ](fg:maroon_light bg:maroon)[ $status ](fg:maroon_light bg:maroon)"
+format = "[](fg:error)[$status](fg:error) "
 disabled = false
 
+# https://starship.rs/config/#command-duration
 [cmd_duration]
-format = "[ 󱐋](fg:yellow_light bg:yellow)[ $duration ](fg:yellow_light bg:yellow)"
+format = "[󱐋](fg:cmd_duration)[$duration](fg:cmd_duration) "
 min_time = 100
 show_milliseconds = true
 
-[fill]
-symbol = ' '
-style = 'bg:bg'
+# https://starship.rs/config/#directory
+[directory]
+format = "[$path](fg:directory)"
+truncate_to_repo = true
+truncation_length = 2
 
-[time]
-time_format = "󰥔 %a %b %e, %I:%M:%S %p"
-format = "[ $time](fg:text bg:bg)"
-disabled = false
-
+# https://starship.rs/config/#character
 [character]
-success_symbol = "[](fg:#a6d189)"
-error_symbol = "[](fg:#ea999c)"
-
+success_symbol = "[](fg:success)"
+error_symbol = "[](fg:error)"
