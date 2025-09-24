@@ -14,9 +14,8 @@ in {
       rm = "rm -iv";
       ".." = "cd ..";
       vi = "nvim";
-      cat = "bat";
       vim = "nvim";
-      vi = "nvim";
+      cat = "bat";
       screen = "TERM=screen screen";
       psg = "ps -ef | grep -v grep | grep $*";
       getpid = "getpid() { ps -ef | grep -v grep | grep \"$1\" | awk '{print $2}'; }; getpid";
