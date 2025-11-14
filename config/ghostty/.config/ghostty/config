@@ -24,7 +24,7 @@ window-theme = ghostty
 window-padding-x = 10
 
 # Background
-background-opacity = 0.70
+background-opacity = 0.90
 background-blur-radius = 50
 
 # Cursor
@@ -32,7 +32,7 @@ cursor-color = #FFE5B4
 cursor-style = bar
 
 # Scrollback
-scrollback-limit = 10_000
+scrollback-limit = 1_024_000
 
 # Copy/Paste
 clipboard-read = allow
