@@ -112,10 +112,10 @@ in {
         fi
       done
 
-      export PATH="''${ASDF_DATA_DIR:-''$HOME/.asdf}/shims:''$PATH"
-
       export FLYCTL_INSTALL="/Users/cte/.fly"
       export PATH="''$FLYCTL_INSTALL/bin:''$PATH"
+
+      eval "$(mise activate zsh)"
     '';
   };
 
