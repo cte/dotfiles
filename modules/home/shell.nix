@@ -112,10 +112,16 @@ in {
         fi
       done
 
+      # https://fly.io/
       export FLYCTL_INSTALL="/Users/cte/.fly"
       export PATH="''$FLYCTL_INSTALL/bin:''$PATH"
 
+      # https://mise.jdx.dev/
       eval "$(mise activate zsh)"
+
+      # https://bun.com/
+      export BUN_INSTALL="$HOME/.bun"
+      export PATH="$BUN_INSTALL/bin:$PATH"
     '';
   };
 

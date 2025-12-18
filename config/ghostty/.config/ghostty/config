@@ -4,11 +4,11 @@ shell-integration-features = no-cursor,sudo,no-title
 
 # Typography
 # font-family = NotoSansM Nerd Font Mono
-# font-family = GeistMono Nerd Font Mono
-font-family = Input Nerd Font Mono
+font-family = GeistMono Nerd Font Mono
+# font-family = Input Nerd Font Mono
 # font-family = JetBrainsMono Nerd Font Mono
 # font-family = BerkeleyMono Nerd Font Mono
-font-size = 14
+font-size = 16
 
 # Theme
 theme = Hardcore
@@ -32,7 +32,7 @@ cursor-color = #FFE5B4
 cursor-style = bar
 
 # Scrollback
-scrollback-limit = 1_024_000
+scrollback-limit = 10_024_000
 
 # Copy/Paste
 clipboard-read = allow
@@ -44,3 +44,4 @@ clipboard-paste-protection = false
 
 # MacOS
 macos-titlebar-style = tabs
+keybind = shift+enter=text:\x1b\r

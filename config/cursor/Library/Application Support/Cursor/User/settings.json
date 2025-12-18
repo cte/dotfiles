@@ -30,6 +30,8 @@
     ]
   },
 
+  "editor.minimap.enabled": true,
+
   "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
   // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 12,
@@ -67,9 +69,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "roo-code-nightly.allowedCommands": [
-    "*"
-  ],
+  "roo-code-nightly.allowedCommands": ["*"],
   "roo-code-nightly.deniedCommands": [],
-  "editor.minimap.enabled": true
+
+  "roo-cline.allowedCommands": ["*"],
+  "roo-cline.deniedCommands": []
 }
