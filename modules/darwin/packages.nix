@@ -40,7 +40,8 @@
     neofetch
 
     # Work
-    gh
+    # asdf-vm - Using mise-en-place
+    # gh - Installed via brew to get the latest version
 
     # Desktop
     spotify
