@@ -68,10 +68,19 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   "roo-code-nightly.allowedCommands": ["*"],
   "roo-code-nightly.deniedCommands": [],
+  "roo-code-nightly.debug": false,
 
   "roo-cline.allowedCommands": ["*"],
-  "roo-cline.deniedCommands": []
+  "roo-cline.deniedCommands": [],
+
+  "claudeCode.preferredLocation": "sidebar",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.initialPermissionMode": "bypassPermissions",
+  "claudeCode.selectedModel": "default"
 }
