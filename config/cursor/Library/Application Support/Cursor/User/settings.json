@@ -5,11 +5,14 @@
   "editor.rulers": [80, 120],
   "editor.inlineSuggest.enabled": true,
 
-  "editor.fontFamily": "NotoSansM Nerd Font Mono",
+  // "editor.fontFamily": "NotoSansM Nerd Font Mono",
   // "editor.fontFamily": "Monaspace Neon Var",
   // "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  // "editor.fontFamily": "ZedMono Nerd Font Mono",
+  // "editor.fontFamily": "VictorMono Nerd Font Mono",
+  "editor.fontFamily": "OverpassM Nerd Font",
   "editor.fontSize": 13,
-  // "editor.fontWeight": "300",
+  "editor.fontWeight": "300",
   // "editor.fontVariations": "'wght' 250",
   // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
@@ -78,6 +81,7 @@
 
   "roo-cline.allowedCommands": ["*"],
   "roo-cline.deniedCommands": [],
+  "roo-cline.debug": false,
 
   "claudeCode.preferredLocation": "sidebar",
   "claudeCode.allowDangerouslySkipPermissions": true,

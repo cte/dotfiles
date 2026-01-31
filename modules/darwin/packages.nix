@@ -8,6 +8,14 @@
     nerd-fonts.space-mono
     nerd-fonts.geist-mono
     nerd-fonts.noto
+    nerd-fonts.victor-mono
+    nerd-fonts.overpass
+    nerd-fonts.blex-mono
+    nerd-fonts.code-new-roman
+    nerd-fonts.lilex
+    nerd-fonts.martian-mono
+    nerd-fonts.monaspace
+    nerd-fonts.roboto-mono
     nerd-fonts.symbols-only
     monaspace
   ];
